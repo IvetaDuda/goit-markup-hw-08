@@ -6,7 +6,7 @@
 	padding: 118px 0;
 	margin: 0 auto;
 	outline: 1px solid #000;
-	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-mobail.jpg);
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-mobile.jpg);
 	background-position: center;
 	background-size: cover;
 	align-items: center;
@@ -29,7 +29,7 @@
 		(min-resolution: 192dpi),
 		(min-resolution: 2dppx) {
 		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(../image/header-img-2x-mobail.jpg);
+			url(../image/header-img-2x-mobile.jpg);
 	}
 	@media screen and (min-width: 768px) {
 		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-table.jpg);
@@ -42,14 +42,14 @@
 		}
 	}
 	@media screen and (min-width: 1200px) {
+		height: 600px;
+		padding: 200px 0;
 		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img.jpg);
 		@media (min-device-pixel-ratio: 2),
 			(-webkit-min-device-pixel-ratio: 2),
 			(min-resolution: 192dpi),
 			(min-resolution: 2dppx) {
 			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-2x.jpg);
-			height: 600px;
-			padding: 200px 0;
 		}
 	}
 }
