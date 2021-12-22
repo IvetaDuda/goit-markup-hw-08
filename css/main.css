@@ -42,21 +42,33 @@
 }
 
 .header-modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  z-index: 2;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 48px 40px;
+  transform: translateX(100%);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .header-modal {
     display: none;
   }
+}
+
+.header-modal .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.is-open {
+  transform: translateX(0);
 }
 
 .header-modal__close {
@@ -77,16 +89,8 @@
   fill: #2196f3;
 }
 
-.header-modal__nav {
-  margin: -32px;
-}
-
-.header-modal__content {
+.header-modal__content:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.header-modal__content:last-child {
-  margin-bottom: 0;
 }
 
 .header-modal__text {
@@ -103,8 +107,12 @@
   color: #2196f3;
 }
 
-.header-modal__box {
-  margin-top: auto;
+.header-modal__contact {
+  margin-bottom: 64px;
+}
+
+.header-modal__navigation:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .header-modal__telephone {
@@ -133,6 +141,7 @@
 .header-modal__items {
   position: relative;
   margin-right: 20px;
+  margin-top: 64px;
 }
 
 .header-modal__socials {
@@ -647,6 +656,7 @@ a {
 
 .services-box {
   padding-top: 94px;
+  padding-bottom: 60px;
 }
 
 .services {
@@ -726,7 +736,7 @@ a {
 
 .description {
   display: none;
-  padding-top: 94px;
+  padding: 94px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -956,8 +966,9 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  padding: 94px 15px;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -974,13 +985,20 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -1119,11 +1137,20 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__consent {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check__item {

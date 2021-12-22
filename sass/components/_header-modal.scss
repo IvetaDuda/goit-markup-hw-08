@@ -1,16 +1,26 @@
 .header-modal {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background-color: $primari-white-color;
-	z-index: 2;
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 1;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	padding: 48px 40px;
-	@media screen and (min-width: 480px) {
+	transform: translateX(100%);
+	@media screen and (min-width: 768px) {
 		display: none;
 	}
+	.container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+.is-open {
+	transform: translateX(0);
 }
 .header-modal__close {
 	position: absolute;
@@ -29,14 +39,8 @@
 		fill: $accent-color;
 	}
 }
-.header-modal__nav {
-	margin: -32px;
-}
-.header-modal__content {
+.header-modal__content:not(:last-child) {
 	margin-bottom: 32px;
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 .header-modal__text {
 	@include font(40px, 500, 1.17, 0.02em);
@@ -48,14 +52,12 @@
 		color: $accent-color;
 	}
 }
-.header-modal__box {
-	margin-top: auto;
+.header-modal__contact {
+	margin-bottom: 64px;
 }
-// .header-modal__box {
-// 	display: flex;
-// 	flex-direction: column;
-// 	margin-top: 302px;
-// }
+.header-modal__navigation:not(:last-child) {
+	margin-bottom: 32px;
+}
 .header-modal__telephone {
 	@include font(34px, 500, 1.17, 0.02em);
 	color: $accent-color;
@@ -73,6 +75,7 @@
 .header-modal__items {
 	position: relative;
 	margin-right: 20px;
+	margin-top: 64px;
 }
 .header-modal__socials {
 	@include font(18px, 500, 1.22, 0.02em);
