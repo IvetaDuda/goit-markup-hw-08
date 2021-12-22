@@ -1,0 +1,154 @@
+.footer {
+	background-color: $background-fotter;
+	padding: 60px 0;
+}
+.footer__box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-right: 74px;
+		padding-left: 61px;
+	}
+	@media screen and (min-width: 1200px) {
+		text-align: start;
+		flex-direction: row;
+	}
+}
+.footer__margin {
+	margin-bottom: 60px;
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 0;
+	}
+}
+.footer-address {
+	@include font(14px, 400, 1.71, 0.03em);
+	font-style: normal;
+	margin: 20px 0 0 0;
+	font-family: inherit;
+
+	&__text {
+		margin: 0 0 9px 0;
+		color: $primari-white-color;
+	}
+	&__link {
+		color: $address-color;
+	}
+}
+.footer-address:last-child {
+	margin-bottom: 0;
+}
+.footer-address__nav:not(:last-child) {
+	margin-bottom: 9px;
+}
+.footer-socials {
+	&:not(:first-letter) {
+		margin-left: 70px;
+	}
+	@media screen and (min-width: 768px) {
+		margin-left: auto;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-left: 70px;
+		margin-right: 93px;
+		margin-bottom: 60px;
+	}
+}
+
+.fotter-socials__title {
+	@include font(14px, 700, 1.14, 0.03em);
+	text-transform: uppercase;
+	color: $primari-white-color;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+/* icons */
+.icon-socials {
+	@include flex;
+	margin: 0;
+	padding: 0;
+}
+.icon-socials__item {
+	width: 44px;
+	height: 44px;
+}
+.icon-socials__item + .icon-socials__item {
+	margin-left: 10px;
+}
+.icon-socials__link {
+	width: 100%;
+	height: 100%;
+	@include flex;
+	fill: $primari-white-color;
+	background-color: #44454e;
+	border-radius: 50%;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+	}
+}
+
+/* form-fotter */
+
+.footer-form {
+	display: flex;
+	&__label {
+		@include font(14px, 700, 1.14, 0.03em);
+		text-transform: uppercase;
+		color: $primari-white-color;
+	}
+	&__input {
+		width: 358px;
+		height: 50px;
+		padding: 15px 16px;
+		background-color: $background-fotter;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+		border-radius: 4px;
+		letter-spacing: 0.03em;
+		color: rgba(255, 255, 255, 0.6);
+		margin-top: 20px;
+		outline: none;
+		@media screen and (min-width: 768px) {
+			width: 450px;
+		}
+		@media screen and (min-width: 1200px) {
+			width: 358px;
+		}
+	}
+	@media screen and (max-width: 1199px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	@media screen and (min-width: 1200px) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		align-items: center;
+	}
+}
+
+.footer-form__btn {
+	width: 200px;
+	height: 50px;
+	@include flex;
+	text-align: center;
+	color: $primari-white-color;
+	background-color: $accent-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	padding: 10px 29px 10px 28px;
+	margin: 36px 0 0 12px;
+}
+
+.footer-form__icon {
+	width: 100%;
+	height: 100%;
+	fill: $primari-white-color;
+	margin-left: 10px;
+}

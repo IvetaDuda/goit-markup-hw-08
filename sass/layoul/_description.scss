@@ -1,0 +1,41 @@
+.description {
+	display: none;
+	padding-top: 94px;
+	@media screen and (min-width: 1200px) {
+		display: block;
+	}
+}
+.description__title {
+	color: $primary-text-color;
+	@include font(36px, 700, 1.16, 0.03em);
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+.description__box {
+	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	max-height: 294px;
+}
+.description-img {
+	position: relative;
+	display: block;
+	max-width: 100%;
+	height: auto;
+	z-index: 1;
+	&__item {
+		position: absolute;
+		@include flex;
+		bottom: 0;
+		right: 0;
+		width: 370px;
+		height: 70px;
+		background-color: rgba(47, 48, 58, 0.8);
+	}
+	&__text {
+		@include font(14px, 700, 1.14, 0.03em);
+		text-transform: uppercase;
+		color: $primari-white-color;
+		margin: 0;
+	}
+}
