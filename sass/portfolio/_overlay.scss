@@ -6,14 +6,33 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-basis: calc(100% / 3 - 30px);
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 	@media screen and (min-width: 768px) {
 		justify-content: center;
 	}
+	@media screen and (min-width: 768px) {
+		margin-bottom: 50px;
+	}
 }
-.button-nav__title:not(:last-child) {
-	margin-right: 8px;
+.button-nav__title {
 	margin-bottom: 15px;
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+	@media screen and (max-width: 767px) {
+		&:nth-child(3n + 3) {
+			margin-right: 0;
+		}
+		&:nth-child(3n + 4) {
+			margin-bottom: 0;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		margin-bottom: 0;
+		&:nth-child(3n + 3) {
+			margin-right: 8px;
+		}
+	}
 }
 .button-nav__text {
 	background-color: $button-background-color;
@@ -42,21 +61,22 @@
 }
 
 .portfolio-box__small {
-	margin-bottom: 30px;
-	width: 100%;
-	height: 404px;
+	margin: 30px 0 0 0;
 	@media screen and (min-width: 768px) {
 		flex-basis: calc(100% / 2 - 30px);
-		margin: 0 30px 30px 0;
+		margin: 30px 0 0 30px;
+		&:nth-child(2n + 1) {
+			margin-left: 0;
+		}
 	}
 	@media screen and (min-width: 1200px) {
 		flex-basis: calc(100% / 3 - 30px);
-		margin: 0 30px 30px 0;
-		&:nth-child(3n + 3) {
-			margin-right: 0;
+		margin: 30px 0 0 30px;
+		&:nth-child(2n + 1) {
+			margin-left: 30px;
 		}
-		&:nth-child(1n + 7) {
-			margin-bottom: 0;
+		&:nth-child(3n + 1) {
+			margin-left: 0;
 		}
 	}
 }
@@ -68,6 +88,11 @@
 	&:focus {
 		box-sizing: border-box;
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	}
+	@media screen and (min-width: 767px) and (max-width: 1199px) {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 }
 
@@ -106,6 +131,9 @@
 	border-right: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
 	border-left: 1px solid #eeeeee;
+	@media screen and (min-width: 767px) and (max-width: 1199px) {
+		flex-grow: 1;
+	}
 }
 
 .overlay::before,

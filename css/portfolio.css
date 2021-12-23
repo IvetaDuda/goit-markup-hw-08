@@ -403,7 +403,8 @@ a {
   .footer__box {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: baseline;
     padding-right: 74px;
     padding-left: 61px;
   }
@@ -466,7 +467,6 @@ a {
 @media screen and (min-width: 1200px) {
   .footer-socials {
     margin-left: 70px;
-    margin-right: 93px;
     margin-bottom: 60px;
   }
 }
@@ -603,7 +603,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - 30px);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -612,9 +612,36 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .button-nav {
+    margin-bottom: 50px;
+  }
+}
+
+.button-nav__title {
+  margin-bottom: 15px;
+}
+
 .button-nav__title:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .button-nav__title:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+  .button-nav__title:nth-child(3n + 4) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-nav__title {
+    margin-bottom: 0;
+  }
+  .button-nav__title:nth-child(3n + 3) {
+    margin-right: 8px;
+  }
 }
 
 .button-nav__text {
@@ -647,28 +674,29 @@ a {
 }
 
 .portfolio-box__small {
-  margin-bottom: 30px;
-  width: 100%;
-  height: 404px;
+  margin: 30px 0 0 0;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-box__small {
     flex-basis: calc(100% / 2 - 30px);
-    margin: 0 30px 30px 0;
+    margin: 30px 0 0 30px;
+  }
+  .portfolio-box__small:nth-child(2n + 1) {
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio-box__small {
     flex-basis: calc(100% / 3 - 30px);
-    margin: 0 30px 30px 0;
+    margin: 30px 0 0 30px;
   }
-  .portfolio-box__small:nth-child(3n + 3) {
-    margin-right: 0;
+  .portfolio-box__small:nth-child(2n + 1) {
+    margin-left: 30px;
   }
-  .portfolio-box__small:nth-child(1n + 7) {
-    margin-bottom: 0;
+  .portfolio-box__small:nth-child(3n + 1) {
+    margin-left: 0;
   }
 }
 
@@ -680,6 +708,14 @@ a {
 .portfolio-box__link:hover, .portfolio-box__link:focus {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .portfolio-box__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .overlay {
@@ -728,6 +764,12 @@ a {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .portfolio-box__content {
+    flex-grow: 1;
+  }
 }
 
 .overlay::before,

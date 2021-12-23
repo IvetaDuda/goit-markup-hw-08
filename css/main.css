@@ -391,7 +391,8 @@ a {
   .footer__box {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: baseline;
     padding-right: 74px;
     padding-left: 61px;
   }
@@ -454,7 +455,6 @@ a {
 @media screen and (min-width: 1200px) {
   .footer-socials {
     margin-left: 70px;
-    margin-right: 93px;
     margin-bottom: 60px;
   }
 }
@@ -631,7 +631,7 @@ a {
 @media screen and (min-width: 768px) {
   .hero {
     width: 100%;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/image/header-img-table.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-table.jpg);
   }
 }
 
