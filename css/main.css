@@ -393,8 +393,6 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    padding-right: 74px;
-    padding-left: 61px;
   }
 }
 
@@ -444,12 +442,6 @@ a {
 
 .footer-socials:not(:first-letter) {
   margin-left: 70px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-socials {
-    margin-left: auto;
-  }
 }
 
 @media screen and (min-width: 1200px) {
