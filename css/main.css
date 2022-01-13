@@ -623,7 +623,7 @@ a {
 @media screen and (min-width: 768px) {
   .hero {
     width: 100%;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/header-img-table.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/Header-img-table.jpg);
   }
 }
 
